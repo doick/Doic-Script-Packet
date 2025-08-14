@@ -3,3 +3,5 @@
 // User API for oCViewDialogTrade
 // Add your methods here
 
+int __fastcall OnTransferLeft_Union(short);
+

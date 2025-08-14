@@ -6,6 +6,8 @@
 #include "MenuStatus.cpp"
 #include "InfoManager.cpp"
 #include "MenuSavegame.cpp"
+#include "Npc.cpp"
+#include "ViewDialogTrade.cpp"
 #include "Plugin.cpp"
 #pragma endregion
 

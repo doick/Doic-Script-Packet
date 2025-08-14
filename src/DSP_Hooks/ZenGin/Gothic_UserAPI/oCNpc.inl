@@ -3,3 +3,5 @@
 // User API for oCNpc
 // Add your methods here
 
+int EV_DropVob_Union(oCMsgManipulate*);
+

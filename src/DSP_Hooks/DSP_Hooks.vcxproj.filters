@@ -2790,6 +2790,12 @@
     <ClInclude Include="MenuSavegame.cpp">
       <Filter>Plugin\Workspace\Hooks</Filter>
     </ClInclude>
+    <ClInclude Include="ViewDialogTrade.cpp">
+      <Filter>Plugin\Workspace\Hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="Npc.cpp">
+      <Filter>Plugin\Workspace\Hooks</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include=".build_settings.inl">
