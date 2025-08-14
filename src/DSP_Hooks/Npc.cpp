@@ -17,13 +17,22 @@ namespace GOTHIC_ENGINE {
 
 			oCItem* itm = dynamic_cast<oCItem*>(t_csg->targetVob);
 
-			if (itm && (itm->flags & ITM_FLAG_MI))
+			int conditionFunc = parser->GetIndex("C_PLAYERCANDROPITEM");
+			int canPlayerDropItem = 1;
+
+			if (conditionFunc <= 0) {
+				cmd << "[DSP_Hooks::Hook_oCNpc_EV_DropVob] `C_PlayerCanDropItem` function not found." << endl;
+			}
+			else
 			{
-				cmd << "[DSP_Hooks::Hook_oCNpc_EV_DropVob] Cannot drop quest related item: " << itm->GetInstanceName() << endl;
-				GetEM()->OnMessage(zNEW(oCMsgManipulate)(
-					oCMsgManipulate::EV_CALLSCRIPT,
-					"PLAYER_CANNOT_DROP_MISSIONITEM",
-					-1), this);
+				parser->SetInstance("ITEM", itm);
+				parser->SetInstance("SELF", this);
+				canPlayerDropItem = *(int*)parser->CallFunc(conditionFunc);
+			}
+
+			if (!canPlayerDropItem)
+			{
+				cmd << "[DSP_Hooks::Hook_oCNpc_EV_DropVob] Player cannot drop quest related item: " << itm->GetInstanceName() << endl;
 				return 1;
 			}
 

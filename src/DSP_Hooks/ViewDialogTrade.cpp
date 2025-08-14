@@ -43,6 +43,7 @@ namespace GOTHIC_ENGINE {
 				else
 				{
 					parser->SetInstance("ITEM", item);
+					parser->SetInstance("SELF", this);
 					canPlayerSellItem = *(int*)parser->CallFunc(conditionFunc);
 				}
 
