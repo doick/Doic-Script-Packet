@@ -1,20 +1,20 @@
-site_name: DSP Docs
+site_name: DUP Docs
 copyright: Copyright &copy; Doic 2024 - 2025
-site_url: https://doicrm.github.io/doic-script-packet
-repo_url: https://github.com/doicrm/Doic-Script-Packet
-repo_name: doicrm/Doic-Script-Packet
+site_url: https://doick.github.io/doick-union-plugins
+repo_url: https://github.com/doick/Doick-Union-Plugins
+repo_name: doick/Doick-Union-Plugins
 theme:
   name: material
   palette:
-    - scheme: default
-      toggle:
-        icon: material/brightness-7 
-        name: Switch to dark mode
     - scheme: slate
+      toggle:
+        icon: material/brightness-4 
+        name: Switch to light mode 
+    - scheme: default
       primary: black
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: Switch to dark mode
   font:
     code: JetBrains Mono
   features:
@@ -42,7 +42,7 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/doicrm/Doic-Script-Packet
+      link: https://github.com/doick/Doick-Union-Plugins
 markdown_extensions:
   - admonition
   - pymdownx.details
